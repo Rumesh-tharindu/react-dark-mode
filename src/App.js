@@ -1,11 +1,12 @@
 import "./styles.css";
-import React from "react";
+import React, { useState } from "react";
+import DarkModeToggle from "react-dark-mode-toggle";
 export default function App() {
+  const [isDarkMode, setIsDarkMode] = useState(() => false);
+
   return (
     <React.Fragment>
-      <h1>
-        <div>count1 you are awesome but</div>
-      </h1>
+      <DarkModeToggle onChange={setIsDarkMode} checked={isDarkMode} size={80} />
     </React.Fragment>
   );
 }
